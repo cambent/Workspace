@@ -1,4 +1,4 @@
-var category = {};
+var product = {};
 
 function showImagesGallery(array){
 
