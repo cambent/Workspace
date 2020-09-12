@@ -66,11 +66,11 @@
           <div class="row text-center text-lg-left pt-2" id="productImagesGallery">
           </div>
         </dd>
-      </dl>
+
      <!--  <a type="button" class="btn btn-light btn-lg btn-block" href="products.html">Ver productos</a>
     </div>  -->
 
-    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+     <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
   <ol class="carousel-indicators">
     <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
     <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
@@ -105,6 +105,12 @@
     <span class="sr-only">Next</span>
   </a>
 </div>
+
+<hr>
+<br>
+<br>
+
+
 <dt>Productos Relacionados</dt>
 <dd>
   <div class="container-fluid">
@@ -113,29 +119,34 @@
   </div>
 </dd>
 
+<hr>
+<br>
+<br>
+
 <dt>Comentarios</dt>
 <hr class="my-3">
 <dd>
   <div class="container-fluid">
-    <div class="row list-group" id="ListaDeComentarios"></div>
+    <div id="ListaDeComentarios"></div>
  </div>
 </dd>
 
+<hr>
+
 <dt>Deja tu comentario</dt>
   <label for="exampleFormControlTextarea4"></label>
-  <textarea class="form-control" id="exampleFormControlTextarea4" rows="3"></textarea>
-  <input type="button" value="Click me">
-</div>
-
-  <hr class="my-3">
-    <dd>
-      <div class="container-fluid">
-      <div class="row" id="rating">
-      </div>
-      </div>
-    </dd>    
-
+  <textarea class="form-control" id="nuevocomentario" rows="3"></textarea>
+  <button class="btn btn-primary" onclick="nuevocomentario();">Enviar</button>
+  <select id="puntaje">
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+  </select>
+  </div>
   </main>
+  
   <footer class="text-muted">
     <div class="container">
       <p class="float-right">

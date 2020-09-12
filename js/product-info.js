@@ -17,11 +17,11 @@ function showImagesGallery(array){
         </div>
         `
 
-        document.getElementById("productImagesGallery").innerHTML = htmlContentToAppend;
+        //document.getElementById("productImagesGallery").innerHTML = htmlContentToAppend;//
     }
 }
 
-//productos relacionados//
+//funcion productos relacionados//
 
 function showRelatedProducts(array){
     getJSONData(PRODUCTS_URL).then(function(resultObj) { 
@@ -55,22 +55,32 @@ function showRelatedProducts(array){
     });
 };
 
-//funcion comentario//
+//funcion comentarios//
 
 function showComents(array) {
     let htmlContentToAppend = "";
-
+    
     for(let i = 0; i < array.length; i++) {
+        let comentario = array[i];
+        let estrellas = "";
+        
+        for (let i = 1; i<= comentario.score; i++) {
+            estrellas += `<i class="fa fa-star checked"> </i>`
+        }
+
+        for (let i = comentario.score + 1; i <=5; i++) {
+            estrellas += `<i class="fa fa-star"> </i>`
+        }
 
         htmlContentToAppend += `
         <div class="list-group">
             <div class="d-flex flex-row comment-row m-t-0">
                 <div class="comment-text w-100">
-                    <h6 class="font-weight-bold">${array[i].user}</h6>
-                    <div id="rating" + ${i}> </div>
-                    <span class="m-b-15 d-block">${array[i].description}</span>
+                    <h6 class="font-weight-bold">${comentario.user}</h6>
+                    <div id="rating"> ${estrellas} </div>
+                    <span class="m-b-15 d-block">${comentario.description}</span>
                 <div class="comment-footer">
-                    <span class="text-muted float-right">${array[i].dateTime}</span>
+                    <span class="text-muted float-right">${comentario.dateTime}</span>
                 </div>
                 </div>
             </div>
@@ -80,6 +90,41 @@ function showComents(array) {
             document.getElementById("ListaDeComentarios").innerHTML = htmlContentToAppend;
     }   
 }
+
+
+
+function nuevocomentario() {
+    let contenido = document.getElementById("nuevocomentario").value;
+    let usuarios = sessionStorage.getItem('user');
+    let valoracion = document.getElementById("puntaje").value;
+    let estrellas = "";
+
+        for (let i = 1; i<= valoracion; i++) {
+            estrellas += `<i class="fa fa-star checked"> </i>`
+        }
+
+        for (let i = valoracion; i <=4; i++) {
+            estrellas += `<i class="fa fa-star"> </i>`
+        }
+
+ htmlContentToAppend = `
+    
+ <div class="list-group">
+ <div class="d-flex flex-row comment-row m-t-0">
+     <div class="comment-text w-100">
+         <h6 class="font-weight-bold">${usuarios}</h6>
+         <div id="rating"> ${estrellas} </div>
+         <span class="m-b-15 d-block">${contenido}</span>
+     <div class="comment-footer">
+         <span class="text-muted float-right"></span>
+     </div>
+     </div>
+ </div>
+ <br>
+ `    
+
+            document.getElementById("ListaDeComentarios").innerHTML += htmlContentToAppend;       
+        }
 
 
 
