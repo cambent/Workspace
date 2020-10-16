@@ -91,8 +91,6 @@ function showComents(array) {
     }   
 }
 
-
-
 function nuevocomentario() {
     let contenido = document.getElementById("nuevocomentario").value;
     let usuarios = sessionStorage.getItem('user');

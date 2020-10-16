@@ -4,8 +4,6 @@
 const usernav= document.getElementById ("usuario") 
 const close = document.getElementById ("close")
 
-let username = sessionStorage.getItem ('user')
-
 if (username !=null){
 usernav.innerHTML ='<a class="py-2 d-none d-md-inline-block" href="#" id = "usuario">' + username [0], usuario + '</a>' ;
 }
@@ -16,4 +14,5 @@ else {
 document.addEventListener("DOMContentLoaded", function (e) {
 
 });
+
 
