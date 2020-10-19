@@ -77,5 +77,32 @@ document.addEventListener("DOMContentLoaded", function(){
 
   }
 
+  document.getElementById("creditCardPaymentRadio").addEventListener("change", function(){
+    document.getElementById("ower").disabled = false;
+    document.getElementById("cardNumber").disabled = false;
+    document.getElementById("cvv").disabled = false;
+    document.getElementById("expiration-date").disabled = false;
+  
+    document.getElementById("bankPaymentRadio").disabled = true;
+  
+    document.getElementById("paymentType").innerHTML ="Tarjeta de crédito"
+  
+    paymentTypeSelected = True;
+    hidePaymentTypeNotSelected();
+  });
+    
+  document.getElementById("bankPaymentRadio").addEventListener("change", function () {
+    document.getElementById("numerodecuenta").disabled = false;
+  
+    document.getElementById("ower").disabled = true;
+    document.getElementById("cardNumber").disabled = true;
+    document.getElementById("cvv").disabled = true;
+    document.getElementById("expiration-date").disabled = true;
+  
+    document.getElementById("paymentType").innerHTML = "Transferencia bancaria"
+  
+    paymentTypeSelected = True;
+    hidePaymentTypeNotSelected();
+  });
 
   
