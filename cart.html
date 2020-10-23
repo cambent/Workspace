@@ -146,18 +146,19 @@
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
+
+      <form>
       <div class="modal-body">
-        
-      <div class="creditCardForm">
-    <div class="heading">
+     <div class="creditCardForm">
+
       <div class="custom-control custom-radio">
         <input id="creditCardPaymentRadio" name="paymentType" type="radio" class="custom-control-input">
         <label class="custom-control-label" for="creditCardPaymentRadio">Tarjeta de crédito</label>
     </div>
-    </div>
+    
     <hr>
     <div class="payment">
-        <form>
+    </div>    
             <div class="form-group owner">
                 <label for="owner">Titular</label>
                 <input type="text" class="form-control" id="owner" placeholder="" value="">
@@ -199,19 +200,23 @@
             </div>
             <hr>
             <div>
+
               <div class="custom-control custom-radio">
                 <input id="bankPaymentRadio" name="paymentType" type="radio" class="custom-control-input">
                 <label class="custom-control-label" for="bankPaymentRadio">Transferencia bancaria</label>
           </div>
+
           <hr>
             <label for="cuentabancaria" id="numerodecuenta">Número de cuenta</label>
             <input type="text" class="form-control" id="cuentabancaria">
             </div>
             
-        </form>
+        </div>
     </div>
 </div>
+
       </div>
+    </form>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Atras</button>
         <button type="submit" class="btn btn-primary">Aceptar</button>

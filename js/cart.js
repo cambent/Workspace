@@ -77,32 +77,35 @@ document.addEventListener("DOMContentLoaded", function(){
 
   }
 
-  document.getElementById("creditCardPaymentRadio").addEventListener("change", function(){
-    document.getElementById("ower").disabled = false;
+  document.getElementById("creditCardPaymentRadio").addEventListener("click", function(){
+    document.getElementById("owner").disabled = false;
     document.getElementById("cardNumber").disabled = false;
     document.getElementById("cvv").disabled = false;
     document.getElementById("expiration-date").disabled = false;
   
-    document.getElementById("bankPaymentRadio").disabled = true;
+    document.getElementById("cuentabancaria").disabled = true;
+    document.getElementById("cuentabancaria").value=" ";
   
     document.getElementById("paymentType").innerHTML ="Tarjeta de crédito"
   
-    paymentTypeSelected = True;
-    hidePaymentTypeNotSelected();
+    
   });
     
-  document.getElementById("bankPaymentRadio").addEventListener("change", function () {
-    document.getElementById("numerodecuenta").disabled = false;
+  document.getElementById("bankPaymentRadio").addEventListener("click", function () {
+    document.getElementById("cuentabancaria").disabled = false;
   
-    document.getElementById("ower").disabled = true;
+    document.getElementById("owner").disabled = true;
+    document.getElementById("owner").value=" ";
     document.getElementById("cardNumber").disabled = true;
+    document.getElementById("cardNumber").value=" ";
     document.getElementById("cvv").disabled = true;
+    document.getElementById("owcvv").value=" ";
     document.getElementById("expiration-date").disabled = true;
+    document.getElementById("expiration-date").value=" ";
   
     document.getElementById("paymentType").innerHTML = "Transferencia bancaria"
   
-    paymentTypeSelected = True;
-    hidePaymentTypeNotSelected();
+  
   });
 
   
