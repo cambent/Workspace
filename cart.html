@@ -43,273 +43,285 @@
       <a class="py-2 d-none d-md-inline-block" href="cart.html">Mi carrito</a>
 
 
-<div class="dropdown">
-  <a class="btn btn-secondary dropdown-toggle" href="#" id="usuario" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-  </a>
+      <div class="dropdown">
+        <a class="btn btn-secondary dropdown-toggle" href="#" id="usuario" role="button" id="dropdownMenuLink"
+          data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        </a>
 
-<div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-  <a class="dropdown-item" href="cart.html">Mi carrito</a>
-  <a class="dropdown-item" href="my-profile.html">Mi perfil</a>
-  <a class="dropdown-item" onclick="cerrarsesion()">Cerrar sesion</a>
-</div>
-</div>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+          <a class="dropdown-item" href="cart.html">Mi carrito</a>
+          <a class="dropdown-item" href="my-profile.html">Mi perfil</a>
+          <a class="dropdown-item" onclick="cerrarsesion()">Cerrar sesion</a>
+        </div>
+      </div>
 
     </div>
   </nav>
-<div>
-<!--Section: Block Content-->
-<section>
+  <div>
+    <!--Section: Block Content-->
+    <section>
 
-  <!--Grid row-->
-  <div class="row">
+      <!--Grid row-->
+      <div class="row">
 
-    <!--Grid column-->
-    <div class="col-lg-8">
+        <!--Grid column-->
+        <div class="col-lg-8">
 
-      <!-- Card -->
-      <div class="card wish-list mb-3">
-        <div class="card-body">
-          <div class="text-center p-4">
-          <h2>Carrito de compras</h2>
-          <h5 class= "lead">Articulos de compras</h5>
-        </div>
-          <table class="table">
-            <thead>
-                <tr>
-                  <th scope="col"></th>
-                  <th scope="col">Nombre</th>
-                  <th scope="col">Costo</th>
-                  <th scope="col">Cantidad</th>
-                  <th scope="col">Subtotal</th>
-                </tr>
-              </thead>
-              <tbody id="showcartproducts">
-              </tbody>
-          </table>
-
-          <hr>
-
-
-        <div class="card-body">
-          <h4 class="mb-4">Tipo de envio</h4>
-              <div class="d-block my-3">
-                <div class="custom-control custom-radio">
-                  <input id="goldradio" name="publicationType" type="radio" class="custom-control-input" checked="" required="">
-                  <label class="custom-control-label" for="goldradio">Premium 2 a 5 días (15%)</label>
-                </div>
-                <div class="custom-control custom-radio">
-                  <input id="premiumradio" name="publicationType" type="radio" class="custom-control-input" required="">
-                  <label class="custom-control-label" for="premiumradio">Express 5 a 8 días (7%)</label>
-                </div>
-                <div class="custom-control custom-radio">
-                  <input id="standardradio" name="publicationType" type="radio" class="custom-control-input" required="">
-                  <label class="custom-control-label" for="standardradio">Estándar 12 a 15 días (5%)</label>
-                </div>
-              
+          <!-- Card -->
+          <div class="card wish-list mb-3">
+            <div class="card-body">
+              <div class="text-center p-4">
+                <h2>Carrito de compras</h2>
+                <h5 class="lead">Articulos de compras</h5>
               </div>
-      
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th scope="col"></th>
+                    <th scope="col">Nombre</th>
+                    <th scope="col">Costo</th>
+                    <th scope="col">Cantidad</th>
+                    <th scope="col">Subtotal</th>
+                  </tr>
+                </thead>
+                <tbody id="showcartproducts">
+                </tbody>
+              </table>
 
-      <form>
-        <div class="form-row">
-          <div class="col">
-            <input type="text" class="form-control" placeholder="Calle">
+              <hr>
+
+
+              <div class="card-body">
+                <h4 class="mb-4">Tipo de envio</h4>
+                <div class="d-block my-3">
+                  <div class="custom-control custom-radio">
+                    <input id="goldradio" name="publicationType" type="radio" class="custom-control-input" checked=""
+                      required="">
+                    <label class="custom-control-label" for="goldradio">Premium 2 a 5 días (15%)</label>
+                  </div>
+                  <div class="custom-control custom-radio">
+                    <input id="premiumradio" name="publicationType" type="radio" class="custom-control-input"
+                      required="">
+                    <label class="custom-control-label" for="premiumradio">Express 5 a 8 días (7%)</label>
+                  </div>
+                  <div class="custom-control custom-radio">
+                    <input id="standardradio" name="publicationType" type="radio" class="custom-control-input"
+                      required="">
+                    <label class="custom-control-label" for="standardradio">Estándar 12 a 15 días (5%)</label>
+                  </div>
+
+                </div>
+
+
+                <form>
+                  <div class="form-row">
+                    <div class="col">
+                      <input type="text" class="form-control" placeholder="Calle">
+                    </div>
+                    <div class="col">
+                      <input type="text" class="form-control" placeholder="Número">
+                    </div>
+                  </div>
+
+                  <br>
+
+                  <div class="mb-1" class="col">
+                    <input type="text" class="form-control" placeholder="Esquina">
+                  </div>
+
+                </form>
+
+                <hr>
+
+                <h4 class="mb-4">Forma de pago</h4>
+                <div>
+                  <span class="label" id="paymentType">No ha seleccionado</span>
+                  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+                </div>
+
+
+                <!-- Modal -->
+                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                  aria-hidden="true">
+                  <div class="modal-dialog">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h2 class="modal-title" id="exampleModalLabel">Forma de págo</h2>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                          <span aria-hidden="true">&times;</span>
+                        </button>
+                      </div>
+
+                      <form>
+                        <div class="modal-body">
+                          <div class="creditCardForm">
+
+                            <div class="custom-control custom-radio">
+                              <input id="creditCardPaymentRadio" name="paymentType" type="radio"
+                                class="custom-control-input ModoPago">
+                              <label class="custom-control-label" for="creditCardPaymentRadio">Tarjeta de
+                                crédito</label>
+                            </div>
+
+                            <hr>
+                            <div class="payment">
+                            </div>
+                            <div class="form-group owner">
+                              <label for="owner">Titular</label>
+                              <input type="text" class="form-control" id="owner" placeholder="" value="" required>
+                            </div>
+                            <div class="form-group" id="card-number-field">
+                              <label for="cardNumber">Número de tarjeta</label>
+
+                              <input type="text" class="form-control" id="cardNumber" placeholder="" value="" required>
+                            </div>
+                            <div class="form-group CVV">
+                              <label for="cvv">Código de seguridad (CVV)</label>
+                              <input type="text" class="form-control" id="cvv" placeholder="" value="" required>
+                            </div>
+
+                            <div class="form-group" id="expiration-date">
+                              <label>Fecha de expiración</label>
+                              <select>
+                                <option value="01">Enero</option>
+                                <option value="02">Febrero </option>
+                                <option value="03">Marzo</option>
+                                <option value="04">Abril</option>
+                                <option value="05">Mayo</option>
+                                <option value="06">Junio</option>
+                                <option value="07">Julio</option>
+                                <option value="08">Agosto</option>
+                                <option value="09">Septiembre</option>
+                                <option value="10">Octubre</option>
+                                <option value="11">Noviembre</option>
+                                <option value="12">Diciembre</option>
+                              </select>
+                              <select>
+                                <option value="20"> 2020</option>
+                                <option value="21"> 2021</option>
+                                <option value="22"> 2022</option>
+                                <option value="23"> 2023</option>
+                                <option value="24"> 2024</option>
+                                <option value="25"> 2025</option>
+                              </select>
+                            </div>
+                            <hr>
+                            <div>
+
+                              <div class="custom-control custom-radio">
+                                <input id="bankPaymentRadio" name="paymentType" type="radio"
+                                  class="custom-control-input ModoPago">
+                                <label class="custom-control-label" for="bankPaymentRadio">Transferencia
+                                  bancaria</label>
+
+                              </div>
+
+                              <hr>
+                              <label for="cuentabancaria" id="numerodecuenta">Número de cuenta</label>
+                              <input type="text" class="form-control" id="cuentabancaria" required>
+                            </div>
+                            <div class="modal-footer">
+                              <button type="button" class="btn btn-secondary" data-dismiss="modal">Atras</button>
+                              <button type="button" id="btnaceptar" class="btn btn-primary"
+                                onclick="validar()">Guardar</button>
+                            </div>
+                          </div>
+                        </div>
+
+                    </div>
+                    </form>
+
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
-          <div class="col">
-            <input type="text" class="form-control" placeholder="Número">
-          </div>
-        </div>
 
-        <br>
+          <!-- Card -->
 
-        <div class= "mb-1" class="col">
-        <input type="text" class="form-control" placeholder="Esquina">
-        </div>
-      
-      </form>
+          <!-- Card -->
 
-      <hr>
-
-      <h4 class="mb-4">Forma de pago</h4>
-      <div>
-        <span class="label" id="paymentType">No ha seleccionado</span>
-        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
-      </div>
-      
-
-      <!-- Modal -->
-<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h2 class="modal-title" id="exampleModalLabel">Forma de pago</h2>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-
-      <form>
-      <div class="modal-body">
-     <div class="creditCardForm">
-
-      <div class="custom-control custom-radio">
-        <input id="creditCardPaymentRadio" name="paymentType" type="radio" class="custom-control-input">
-        <label class="custom-control-label" for="creditCardPaymentRadio">Tarjeta de crédito</label>
-    </div>
-    
-    <hr>
-    <div class="payment">
-    </div>    
-            <div class="form-group owner">
-                <label for="owner">Titular</label>
-                <input type="text" class="form-control" id="owner" placeholder="" value="">
-            </div>
-            <div class="form-group" id="card-number-field">
-                <label for="cardNumber">Número de tarjeta</label>
-                
-                <input type="text" class="form-control" id="cardNumber" placeholder="" value="">
-            </div>
-            <div class="form-group CVV">
-                <label for="cvv">Código de seguridad (CVV)</label>
-                <input type="text" class="form-control" id="cvv" placeholder="" value="">
-            </div>
-            
-            <div class="form-group" id="expiration-date">
-                <label>Fecha de expiración</label>
-                <select>
-                    <option value="01">Enero</option>
-                    <option value="02">Febrero </option>
-                    <option value="03">Marzo</option>
-                    <option value="04">Abril</option>
-                    <option value="05">Mayo</option>
-                    <option value="06">Junio</option>
-                    <option value="07">Julio</option>
-                    <option value="08">Agosto</option>
-                    <option value="09">Septiembre</option>
-                    <option value="10">Octubre</option>
-                    <option value="11">Noviembre</option>
-                    <option value="12">Diciembre</option>
-                </select>
-                <select>
-                    <option value="20"> 2020</option>
-                    <option value="21"> 2021</option>
-                    <option value="22"> 2022</option>
-                    <option value="23"> 2023</option>
-                    <option value="24"> 2024</option>
-                    <option value="25"> 2025</option>
-                </select>
-            </div>
-            <hr>
-            <div>
-
-              <div class="custom-control custom-radio">
-                <input id="bankPaymentRadio" name="paymentType" type="radio" class="custom-control-input">
-                <label class="custom-control-label" for="bankPaymentRadio">Transferencia bancaria</label>
-          </div>
-
-          <hr>
-            <label for="cuentabancaria" id="numerodecuenta">Número de cuenta</label>
-            <input type="text" class="form-control" id="cuentabancaria">
-            </div>
-            
-        </div>
-    </div>
-</div>
-
-      </div>
-    </form>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Atras</button>
-        <button type="submit" class="btn btn-primary">Aceptar</button>
-      </div>
-    </div>
-  </div>
-</div>
-</div>
-
-      <!-- Card -->
-
-      <!-- Card -->
-  
           <div class="card-body">
             <h5 class="mb-4">Aceptamos</h5>
 
-          <img class="mr-2" width="45px"
-            src="https://mdbootstrap.com/wp-content/plugins/woocommerce-gateway-stripe/assets/images/visa.svg"
-            alt="Visa">
-          <img class="mr-2" width="45px"
-            src="https://mdbootstrap.com/wp-content/plugins/woocommerce-gateway-stripe/assets/images/amex.svg"
-            alt="American Express">
-          <img class="mr-2" width="45px"
-            src="https://mdbootstrap.com/wp-content/plugins/woocommerce-gateway-stripe/assets/images/mastercard.svg"
-            alt="Mastercard">
-          <img class="mr-2" width="45px"
-            src="https://z9t4u9f6.stackpathcdn.com/wp-content/plugins/woocommerce/includes/gateways/paypal/assets/images/paypal.png"
-            alt="PayPal acceptance mark">
+            <img class="mr-2" width="45px"
+              src="https://mdbootstrap.com/wp-content/plugins/woocommerce-gateway-stripe/assets/images/visa.svg"
+              alt="Visa">
+            <img class="mr-2" width="45px"
+              src="https://mdbootstrap.com/wp-content/plugins/woocommerce-gateway-stripe/assets/images/amex.svg"
+              alt="American Express">
+            <img class="mr-2" width="45px"
+              src="https://mdbootstrap.com/wp-content/plugins/woocommerce-gateway-stripe/assets/images/mastercard.svg"
+              alt="Mastercard">
+            <img class="mr-2" width="45px"
+              src="https://z9t4u9f6.stackpathcdn.com/wp-content/plugins/woocommerce/includes/gateways/paypal/assets/images/paypal.png"
+              alt="PayPal acceptance mark">
+          </div>
         </div>
       </div>
-      </div>
       <!-- Card -->
 
-    </div>
-    <!--Grid column-->
+  </div>
+  <!--Grid column-->
 
-    <!--Grid column-->
-    <div class="col-lg-4">
+  <!--Grid column-->
+  <div class="col-lg-4">
 
-      <!-- Card -->
-      <div class="card mb-3">
-        <div class="card-body">
+    <!-- Card -->
+    <div class="card mb-3">
+      <div class="card-body">
 
-          <ul class="list-group list-group-flush">
-            <li class="list-group-item d-flex justify-content-between align-items-center border-0 px-0 pb-0">
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item d-flex justify-content-between align-items-center border-0 px-0 pb-0">
 
-              Sub-total
-              <span id= "subtotal-span"></span>
-            </li>
-            <li class="list-group-item d-flex justify-content-between align-items-center px-0">
+            Sub-total
+            <span id="subtotal-span"></span>
+          </li>
+          <li class="list-group-item d-flex justify-content-between align-items-center px-0">
 
-              Costo de Envio
-              <span>Gratis</span>
-            </li>
-            <li class="list-group-item d-flex justify-content-between align-items-center border-0 px-0 mb-3">
+            Costo de Envio
+            <span id="costoenvio"></span>
+          </li>
+          <li class="list-group-item d-flex justify-content-between align-items-center border-0 px-0 mb-3">
+            <div>
+
+              <strong>Total</strong>
               <div>
 
-                <strong>Total</strong>
-                <div>
-
-                </div>
-                <strong>
-                  <p class="mb-0">(envío incluido)</p>
-                </strong>
               </div>
-              <span><strong id= "final-total"></strong></span>
-            </li>
-          </ul>
+              <strong>
+                <p class="mb-0">(envío incluido)</p>
+              </strong>
+            </div>
+            <span><strong id="final-total"></strong></span>
+          </li>
+        </ul>
 
-          <button type="button" class="btn btn-primary btn-block waves-effect waves-light">Finalizar compra</button>
+        <button type="button" class="btn btn-primary btn-block waves-effect waves-light"
+          onclick="finalizarCompra()">Finalizar compra</button>
 
-        </div>
       </div>
-      <!-- Card -->
-
-      <!-- Card -->
-
-      <!-- Card -->
-
     </div>
-    <!--Grid column-->
+    <!-- Card -->
+
+    <!-- Card -->
+
+    <!-- Card -->
+
+  </div>
+  <!--Grid column-->
 
   </div>
   <!--Grid row-->
 
-</section>
-<!--Section: Block Content-->
-</div>
-    <!--   <h4 class="alert-heading">¡A trabajar! :)</h4>
+  </section>
+  <!--Section: Block Content-->
+  </div>
+  <!--   <h4 class="alert-heading">¡A trabajar! :)</h4>
       <p>Esta sección corresponde a: Entrega 5 (Fecha de entrega: 11/10/2020) y Entrega 6 (Fecha de entrega: 25/10/2020).</p>
       <hr>
       <p class="mb-0">Para saber qué debes hacer, fijate en la actividad en CREA correspondiente a esta entrega.</p -->
-    </div>
+  </div>
   </div>
   <div id="spinner-wrapper">
     <div class="lds-ring">
@@ -318,13 +330,19 @@
       <div></div>
       <div></div>
     </div>
-    
+
   </div>
   <script src="js/jquery-3.4.1.min.js"></script>
   <script src="js/bootstrap.bundle.min.js"></script>
   <script src="js/dropzone.js"></script>
   <script src="js/init.js"></script>
   <script src="js/cart.js"></script>
+  <script>
+    $("#btnAceptar").click(function () {
+      $("#exampleModal").modal("hide");
+    });
+
+  </script>
 </body>
 
 </html>
