@@ -41,22 +41,142 @@
       <a class="py-2 d-none d-md-inline-block" href="products.html">Productos</a>
       <a class="py-2 d-none d-md-inline-block" href="sell.html">Vender</a>
       <a class="py-2 d-none d-md-inline-block" href="cart.html">Mi carrito</a>
-      <a class="py-2 d-none d-md-inline-block" href="" id="logout" ></a>
-
-      <div id="logout">
-      </div>
-
     </div>
   </nav>
   <div class="container p-5">
-    <div class="alert alert-danger" role="alert" style="position: relative; width:auto; top: 0;">
-      </div>
+    <!--<div class="alert alert-danger" role="alert" style="position: relative; width:auto; top: 0;">
       <h4 class="alert-heading">¡A trabajar! :)</h4>
       <p>Esta sección corresponde a: Entrega 7 (Fecha de entrega: 8/11/202020) -> Punto 1 y 2.</p>
       <hr>
       <p class="mb-0">Para saber qué debes hacer, fijate en la actividad en CREA correspondiente a esta entrega.</p>
+    </div>-->
+
+    <h2>Mi perfil</h2>
+    <hr>
+    <br>
+    <br>
+
+    <form class="form-group">
+      <div class="form-row">
+
+        <div class="form-group col-md-6 col-sm-12">
+          <label for="nombres">Nombres:</label>
+          <input id="mostrarnombre" class="form-control" type="text" disabled placeholder="Ingresa tu nombre completo"
+            name="nombre">
+        </div>
+
+        <div class="form-group col-md-6 col-sm-12">
+          <label for="apellido">Apellidos:</label>
+          <input id="mostrarapellido" class="form-control" type="text" disabled  placeholder="Ingresa tus apellidos completos"
+            name="apellido">
+        </div>
+
+        <div class="form-group col-md-6 col-sm-12">
+          <label for="edad">Edad:</label>
+          <input id="mostraredad" class="form-control" type="text" disabled placeholder="Ingresa tu edad" name="edad">
+        </div>
+
+      </div>
+
+  <!--   <div class="form-group col-md-6 col-sm-12">
+        <label for="telefono">Telefono:</label>
+        <input id="mostrartelefono" class="form-control" type="text" disabled placeholder="Ingresa tu telefono" name="telefono">
+      </div> -->
+
+      <div class="form-row">
+
+        <div class="form-group col-md-6 col-sm-12">
+          <label for="correo">Correo electrónico:</label>
+          <input id="mostrarcorreo" class="form-control" type="text" type="email" disabled 
+            placeholder="Ingresa tu correo electronico (example@example.xxx)"  name="correo">
+        </div>
+
+        <div class="form-group col-md-6 col-sm-12">
+          <label for="dirección">Dirección:</label>
+          <input id="mostrardireccion" class="form-control" type="text" disabled  placeholder="Ingresa tu dirección"
+            name="direccion">
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-12 text-center">
+          <!-- Button trigger modal -->
+          <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
+            Editar Perfil
+          </button>
+        </div>
+      </div>
+  </div>
+  </form>
+
+ <!--  MODAL  -->
+ <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle">Editar Perfil</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        
+        <form class="form-group">
+
+          <div class="form-row">
+    
+            <div class="form-group col-md-6 col-sm-12">
+              <label for="nombres">Nombres:</label>
+              <input id="nombre" class="form-control" type="text" id="nombre"  placeholder="Ingresa tu nombre completo"
+                name="nombre">
+            </div>
+    
+            <div class="form-group col-md-6 col-sm-12">
+              <label for="apellido">Apellidos:</label>
+              <input id="apellido" class="form-control" type="text" id="apellido"  placeholder="Ingresa tu apellido completo"
+                name="apellido">
+            </div>
+    
+            <div class="form-group col-md-6 col-sm-12">
+              <label for="edad">Edad:</label>
+              <input id="edad" class="form-control" type="text" id="edad"  placeholder="Ingresa tu edad" name="edad">
+            </div>
+    
+          </div>
+    
+          <div class="form-row">
+    
+            <div class="form-group col-md-6 col-sm-12">
+              <label for="correo">Correo electrónico:</label>
+              <input id="correo" class="form-control" type="text" type="email" id="correo"  
+                placeholder="Ingresa tu correo electronico (example@example.xxx)" name="correo">
+            </div>
+    
+            <div class="form-group col-md-6 col-sm-12">
+              <label for="dirección">Dirección:</label>
+              <input id="direccion" class="form-control" type="text" id="direccion" placeholder="Ingresa tu dirección"
+                name="direccion">
+            </div>
+          </div>
+    
+          <div class="row">
+            <div class="col-md-12 text-center">
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                <button type="button" class="btn btn-primary" onclick="guardarTodo()">Guardar</button>
+              </div>
+            </div>
+          </div>
+      </div>
+      </form>
+
+      </div>
+      
     </div>
   </div>
+</div>
+</div>
+
   <footer class="text-muted bg-light">
     <div class="container">
       <p>Este sitio forma parte de Desarrollo Web - JAP - 2020</p>
